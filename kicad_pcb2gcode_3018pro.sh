@@ -3,15 +3,15 @@
 #
 # Based on https://gist.github.com/dzervas/fb439ae2e1c94096a024ce610f8294c8
 
-BASE_PATH=usbled/out
-OUT_PATH=pcb2gcodetest
+BASE_PATH=${1:-usbled/out}
+OUT_PATH=${2:-pcb2gcodetest}
 
 mkdir -p ${OUT_PATH}
 
 pcb2gcode \
-  --back ${BASE_PATH}/*-B_Cu.gbr \
-  --front ${BASE_PATH}/*-F_Cu.gbr \
-  --outline ${BASE_PATH}/*-Edge_Cuts.gbr \
+  --back ${BASE_PATH}/*-B.Cu.gbr \
+  --front ${BASE_PATH}/*-F.Cu.gbr \
+  --outline ${BASE_PATH}/*-Edge.Cuts.gbr \
   --drill ${BASE_PATH}/**.drl \
   --output-dir ${OUT_PATH} \
   --config millprojectest.cfg
