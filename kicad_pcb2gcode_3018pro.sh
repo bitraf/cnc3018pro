@@ -9,9 +9,9 @@ OUT_PATH=${2:-pcb2gcodetest}
 mkdir -p ${OUT_PATH}
 
 pcb2gcode \
-  --back ${BASE_PATH}/*-B.Cu.gbr \
-  --front ${BASE_PATH}/*-F.Cu.gbr \
-  --outline ${BASE_PATH}/*-Edge.Cuts.gbr \
+  --back ${BASE_PATH}/*-B?Cu.gbr \
+  --front ${BASE_PATH}/*-F?Cu.gbr \
+  --outline ${BASE_PATH}/*-Edge?Cuts.gbr \
   --drill ${BASE_PATH}/**.drl \
   --output-dir ${OUT_PATH} \
   --config millprojectest.cfg
