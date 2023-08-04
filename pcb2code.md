@@ -5,7 +5,12 @@ Testing using [pcb2gcode](https://github.com/pcb2gcode/pcb2gcode) to mill PCBs.
 
 # Status
 
-Gcode needs to have some commands removed. M0 and M6 for toolchange
+
+# Notes
+
+There is a M0 in the output gcode.
+In UGS, will get HOLD state.
+Press Play again to continue
 
 # TODO
 
