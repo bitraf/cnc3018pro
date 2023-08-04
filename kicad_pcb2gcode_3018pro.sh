@@ -20,7 +20,7 @@ pcb2gcode \
 # Strip tool changes from drill file
 #
 # notooldrill.ngc is the drill file without tool changes
-grep -v "^T" milldrill.ngc > notooldrill.ngc
+grep -v "^T" ${OUT_PATH}/drill.ngc > ${OUT_PATH}/notooldrill.ngc
 
 # Remove unsupported irrelevant g-code
 #grep -v "^G64" front.ngc | grep -v "^M6" > fix-front.ngc
